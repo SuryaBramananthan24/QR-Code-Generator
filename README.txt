@@ -1,75 +1,35 @@
-# QR Code Generator
+QR Code Generator
 
-This project is a simple web application that generates QR codes. Users provide a name and a URL, and the application generates a QR code that is immediately downloaded as an image file. Built using Python Flask and the `qrcode` library, this tool is straightforward and efficient.
+This project is a simple web application for generating QR codes. Users can provide a name and URL, and the application will generate a QR code that is automatically downloaded as an image file. The project is developed using Python Flask and the `qrcode` library.
 
-## Features
-- Generate QR codes by entering a name and a URL.
-- Automatically download the QR code image upon submission.
+Features:
+- Enter a name and a URL to generate a custom QR code.
+- Automatically downloads the QR code image.
 - Minimalist design for ease of use.
 
-## Getting Started
+Setup Instructions:
+1. Clone the repository to your local machine.
+2. Create a virtual environment and activate it.
+3. Install the dependencies listed in `requirements.txt`.
+4. Run the application by executing `server.py`.
+5. Open a browser and navigate to `http://localhost:5000`.
 
-### Requirements
-To run this project, ensure you have the following installed:
-- Python 3.7 or later
-- pip (Python package installer)
+Project Structure:
+- `templates/qr.html` : HTML file for the user interface.
+- `server.py` : Main application file.
+- `requirements.txt` : Python libraries required to run the application.
 
-### Setup Instructions
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/SuryaBramananthan24/QR-Code-Generator.git
-   cd QR-Code-Generator
-   ```
+Dependencies:
+- Flask: Lightweight WSGI web application framework.
+- qrcode: Python library for generating QR codes.
 
-2. Create and activate a virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
+Usage:
+1. Launch the application in a browser.
+2. Provide a file name and URL in the form.
+3. Submit the form to download the QR code image.
 
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+License:
+This project is open-sourced under the MIT License.
 
-4. Run the application:
-   ```bash
-   python server.py
-   ```
-
-5. Open your web browser and navigate to:
-   ```
-   http://127.0.0.1:5000
-   ```
-
-## Usage
-1. Open the application in your browser.
-2. Fill out the form with the desired file name and the URL to encode.
-3. Submit the form to generate and download the QR code image.
-
-## Folder Structure
-```
-QR-Code-Generator/
-|-- templates/
-|   |-- qr.html        # HTML file for the UI
-|-- server.py          # Main Flask application file
-|-- requirements.txt   # List of dependencies
-|-- README.md          # Documentation
-```
-
-## Dependencies
-This project uses the following Python libraries:
-- Flask: Web framework
-- qrcode: Library for generating QR codes
-
-Install them with:
-```bash
-pip install -r requirements.txt
-```
-
-## License
-This project is licensed under the MIT License.
-
-## Contributing
-Contributions are welcome! Feel free to fork the repository and submit a pull request with your improvements or new features.
-
+Contributions:
+Contributions are welcome! Fork the repository and submit a pull request with improvements or new features.
