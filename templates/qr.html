@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR_Code_Generator</title>
+    <link rel="stylesheet" href="qr.css">
+</head>
+<style>
+body{
+    	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    	height:100vh;
+}
+div{
+background: linear-gradient(90deg, rgba(255,83,65,1) 0%, rgba(214,7,42,0.9724264705882353) 50%, rgba(149,64,70,1) 100%);
+		padding: 20px;
+		border-radius: 15px;
+		border : 10px solid #F5F5F5;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		height:15%;
+		width : 25%;
+}
+#h{
+    color:white;
+}
+#l{
+	color:#FFFFFF;
+    font-size:20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	border-radius : 15px;
+}
+#li{
+	color : black;
+	font-family:'Franklin Gothic Medium';
+	font-size:18px;
+	border-radius : 25px;
+}
+.inb{
+    background-color:#2fcb0b;
+    color:white;
+    padding:2%;
+	border-radius: 15px;
+}
+</style>
+<body><br><br><br><br><br><br><br><br>
+    <center>
+    <form method='POST' action="{{url_for('qrc')}}"><br><br>
+    <div>
+        <h1 id="h">QR - Code Generator</h1><br><br>
+        <label id="l"> Name : </label>
+        <input type="text" name="name" id ="li"required><br><br>    
+        <label id="l">&nbspLink : &nbsp</label>
+        <input type="text" name="link" id ="li" required><br><br>
+        <input type="submit" class="inb"><br><br>
+    </div>
+    </form>
+    </center>
+</body>
+</html>
