@@ -5,15 +5,22 @@ import io
 app = Flask(__name__,template_folder='templates')
 
 @app.route('/',methods=['GET','POST'])
-
 def qrc():
     if request.method == 'GET':
         return render_template('qr.html')
     if request.method == 'POST':
         name = request.form.get('name')
         link = request.form.get('link')
-        qr = qrcode.QRCode(version = 10, box_size = 10,border = 5)	
-        qr.add_data(link)
+        location = request.form.get('location')
+        qr = qrcode.QRCode(version = 10, box_size = 10,border = 5)
+        if location:
+            lat, lng = location.split(',')
+            here_link = f'https://share.here.com/l/{lat},{lng}'
+            qr.add_data(here_link)
+        elif link:
+            qr.add_data(link)
+        else:
+            return 'No link or location provided', 400
         qr.make(fit = True)
         img = qr.make_image(fill='black',back_color='white')  
         ni = io.BytesIO() 
